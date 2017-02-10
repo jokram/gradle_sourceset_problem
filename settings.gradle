@@ -1,4 +1,4 @@
-include ':dummyprj'
+//include ':dummyprj'
 include ':subprj1'
 include ':subprj2'
 include ':zlibprj'
