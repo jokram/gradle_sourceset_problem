@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+dependencies {
+   compile project(':zlibprj')
+   testCompile project(':zlibprj').sourceSets.test.output 
+} 
+
+configurations.testCompile.each {
+   println "testCompile: $project.name => $it"
+}

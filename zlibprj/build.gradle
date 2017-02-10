@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+repositories {
+   maven {
+      url "http://mvn-nexus.conti.de:8081/nexus/content/groups/public/" 
+   }
+}
+
+dependencies {
+   testCompile 'junit:junit:4.12'
+} 
+
+configurations.testCompile.each {
+   println "testCompile: $project.name => $it"
+}

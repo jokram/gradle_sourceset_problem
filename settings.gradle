@@ -1,0 +1,5 @@
+include ':dummyprj'
+include ':subprj1'
+include ':subprj2'
+include ':zlibprj'
+rootProject.name = 'gradle_sourceset_problem'

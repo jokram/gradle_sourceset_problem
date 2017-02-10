@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+repositories {
+   maven {
+      url "http://mvn-nexus.conti.de:8081/nexus/content/groups/public/" 
+   }
+}
+
+dependencies {
+   compile project(':zlibprj')
+   testCompile project(':zlibprj').sourceSets.test.output 
+   testCompile 'junit:junit:4.12'
+} 
+
+configurations.testCompile.each {
+   println "testCompile: $project.name => $it"
+}
